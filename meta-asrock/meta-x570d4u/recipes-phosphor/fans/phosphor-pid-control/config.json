@@ -1,0 +1,80 @@
+{
+  "sensors": [
+    {
+      "name": "Fan1",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm1",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm1",
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "Fan2",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm2",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm2",
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "Fan3",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm3",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm3",
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "Fan4",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm4",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm4",
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "Fan5",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm5",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm5",
+      "min": 0,
+      "max": 255
+    },
+    {
+      "name": "Fan6",
+      "type": "fan",
+      "readPath": "/sys/class/hwmon/hwmon0/pwm6",
+      "writePath": "/sys/class/hwmon/hwmon0/pwm6",
+      "min": 0,
+      "max": 255
+    }
+  ],
+  "zones": [
+    {
+      "id": 1,
+      "minThermalOutput": 0.0,
+      "failsafePercent": 100.0,
+      "pids": [
+        {
+          "name": "fan1-6",
+          "type": "fan",
+          "inputs": ["fan1", "fan2", "fan3", "fan4", "fan5", "fan6"],
+          "setpoint": 90.0,
+          "pid": {
+            "samplePeriod": 0.1,
+            "proportionalCoeff": 0.0,
+            "integralCoeff": 0.0,
+            "feedFwdOffsetCoeff": 0.0,
+            "feedFwdGainCoeff": 1.0,
+            "integralLimit_min": 0.0,
+            "integralLimit_max": 0.0,
+            "outLim_min": 3.0,
+            "outLim_max": 100.0,
+            "slewNeg": 0.0,
+            "slewPos": 0.0
+          }
+        }
+      ]
+    }
+  ]
+}
