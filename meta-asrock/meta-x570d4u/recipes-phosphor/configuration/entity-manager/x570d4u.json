@@ -1,27 +1,6 @@
 {
   "Exposes": [
     {
-      "Address": "0x4c",
-      "Bus": 1,
-      "Name": "MAINBOARD_1",
-      "Name1": "MAINBOARD_2",
-      "Thresholds": [
-        {
-          "Direction": "greater than",
-          "Name": "upper critical",
-          "Severity": 1,
-          "Value": 55
-        },
-        {
-          "Direction": "greater than",
-          "Name": "upper non critical",
-          "Severity": 0,
-          "Value": 54
-        }
-      ],
-      "Type": "W83773G"
-    },
-    {
       "Index": 0,
       "Name": "3VSB",
       "ScaleFactor": 0.4,
